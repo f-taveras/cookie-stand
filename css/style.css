@@ -40,14 +40,18 @@ nav ul li a{
 
 main{
     background: white;
+    margin: 30px;
 }
 
 .salmon-container{
     display: flex;
     justify-content: center;
     align-items: flex-start;
+    border-bottom: #333 solid .1px;
+    padding-bottom: 30px;
     
 }
+
 
 
 ul li {
@@ -62,14 +66,21 @@ ul li {
 
 #locationList{
     list-style-type: none;
-    display: flex;
-    flex-direction: column;
-}
-
-.cards{
+    /* display: flex; */
+    /* flex-direction: column; */
     margin: 2px;
+    /* display: list-item; */
     
 }
+#storeList{
+    margin-top:50px ;
+}
+#storeList h2{
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: .5em;
+}
+
 footer{
     
     bottom: 0;
