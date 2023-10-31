@@ -1,100 +1,184 @@
-const locations = [
-    {
-      mincustomer: 23,
-      maxcustomer: 65,
-      avg: 6.3,
-      name: 'Seattle',
-      hoursOpen: '6am - 7pm',
-      contactInfo: '123-456-7890',
-      location: '2901 3rd Ave #300, Seattle, WA 98121'
-    },
-    {
-      mincustomer: 23,
-      maxcustomer: 65,
-      avg: 1.2,
-      name: 'Tokyo',
-      hoursOpen: '6am - 7pm',
-      contactInfo: '222-222-2222',
-      location: '1 Chome-1-2 Oshieage, Sumida City, Tokyo 131-8634'
-    },
-    {
-      mincustomer: "0",
-      maxcustomer: 65,
-      avg: 1.2,
-      name: 'Dubai',
-      hoursOpen: '6am - 7pm',
-      contactInfo: '333-333-3333',
-      location: '1 Sheikh Mohammed bin Rashid Blvd - Dubai'
-    },
-    {
-      mincustomer: 23,
-      maxcustomer: 65,
-      avg: 1.2,
-      name: 'Paris',
-      hoursOpen: '6am - 7pm',
-      contactInfo: '444-444-4444',
-      location: 'Champ de Mars, 5 Avenue Anatole France, 75007 Paris'
-    },
-    {
-      mincustomer: 23,
-      maxcustomer: 65,
-      avg: 1.2,
-      name: 'Lima',
-      hoursOpen: '6am - 7pm',
-      contactInfo: '555-555-5555',
-      location: 'Ca. Gral. Borgoño cuadra 8, Miraflores 15074'
-    }
-  ];
-  
-  function displayLocations(locationArray) {
-    const locationList = document.getElementById("locationList");
-  
-    locationArray.forEach(location => {
-      const listItem = document.createElement("li");
-      listItem.textContent = `Name: ${location.name}, Hours: ${location.hoursOpen}, Contact: ${location.contactInfo}, Location: ${location.location}`;
-      locationList.appendChild(listItem);
-    });
+const seattle = {
+  hours: "6am - 7pm",
+  name: "Seattle",
+  contactInfo: "316-555-1212",
+  location: "2901 3rd Ave #300, Seattle, WA 96121",
+  render: function () {
+    const rootElement = document.getElementById("storeList");
+    const storeSection = document.createElement("section");
+    storeSection.classList.add("location");
+    rootElement.appendChild(storeSection);
+
+    const title = document.createElement("h2");
+    title.textContent = this.name;
+    storeSection.appendChild(title);
+
+    const storeDataList = document.createElement("ul");
+    storeSection.appendChild(storeDataList);
+
+
+    // create a list item for the hours
+    const storeHours = document.createElement('li');
+    storeHours.textContent = `Hours Open: ${this.hours}`;
+    storeDataList.appendChild(storeHours)
+
+    // Create a list item for the location
+    const storeAddress = document.createElement("li");
+    storeAddress.textContent = `Location: ${this.location}`;
+    storeDataList.appendChild(storeAddress);
+
+    // Create a list item for the contactInfo
+    const phoneItem = document.createElement('li');
+    phoneItem.textContent = `Contact Info: ${this.contactInfo}`;
+    storeDataList.appendChild(phoneItem);
+
+
   }
-  
-  displayLocations(locations);
-  
-  
+}
 
 
 
+const tokyo = {
+  hours: "6am - 7am",
+  name: "Tokyo",
+  contactInfo: "222-333-1212",
+  location: "1 Chome-1-2 Oshiaga, Sumida City, Tokyo 131-8634",
+  render: function () {
+    const rootElement = document.getElementById("storeList");
+    const storeSection = document.createElement("section");
+    rootElement.appendChild(storeSection);
+
+    const title = document.createElement("h2");
+    title.textContent = this.name;
+    storeSection.appendChild(title);
+
+    const storeDataList = document.createElement("ul");
+    storeSection.appendChild(storeDataList);
+    // create a list item for the hours
+    const storeHours = document.createElement('li');
+    storeHours.textContent = `Hours Open: ${this.hours}`;
+    storeDataList.appendChild(storeHours)
+
+    // Create a list item for the location
+    const storeAddress = document.createElement("li");
+    storeAddress.textContent = `Location: ${this.location}`;
+    storeDataList.appendChild(storeAddress);
+
+    // Create a list item for the contactInfo
+    const phoneItem = document.createElement('li');
+    phoneItem.textContent = `Contact Info: ${this.contactInfo}`;
+    storeDataList.appendChild(phoneItem);
+
+  }
+}
+
+const dubai = {
+  hours: "6am - 7am",
+  name: "Dubai",
+  contactInfo: "333-333-3333",
+  location: "1 Sheikh Mohammed bin Rashid Blvd - Dubai",
+  render: function () {
+    const rootElement = document.getElementById("storeList");
+    const storeSection = document.createElement("section");
+    rootElement.appendChild(storeSection);
+
+    const title = document.createElement("h2");
+    title.textContent = this.name;
+    storeSection.appendChild(title);
+
+    const storeDataList = document.createElement("ul");
+    storeSection.appendChild(storeDataList);
+    // create a list item for the hours
+    const storeHours = document.createElement('li');
+    storeHours.textContent = `Hours Open: ${this.hours}`;
+    storeDataList.appendChild(storeHours)
+
+    // Create a list item for the location
+    const storeAddress = document.createElement("li");
+    storeAddress.textContent = `Location: ${this.location}`;
+    storeDataList.appendChild(storeAddress);
+
+    // Create a list item for the contactInfo
+    const phoneItem = document.createElement('li');
+    phoneItem.textContent = `Contact Info: ${this.contactInfo}`;
+    storeDataList.appendChild(phoneItem);
 
 
 
+  }
+}
+
+const paris = {
+  hours: "6am - 7am",
+  name: "Paris",
+  contactInfo: "444-444-4444",
+  location: "Champ de Mars, 5 Avenue Anatole France, 75007 Paris",
+  render: function () {
+    const rootElement = document.getElementById("storeList");
+    const storeSection = document.createElement("section");
+    rootElement.appendChild(storeSection);
+
+    const title = document.createElement("h2");
+    title.textContent = this.name;
+    storeSection.appendChild(title);
+
+    const storeDataList = document.createElement("ul");
+    storeSection.appendChild(storeDataList);
+    // create a list item for the hours
+    const storeHours = document.createElement('li');
+    storeHours.textContent = `Hours Open: ${this.hours}`;
+    storeDataList.appendChild(storeHours)
+
+    // Create a list item for the location
+    const storeAddress = document.createElement("li");
+    storeAddress.textContent = `Location: ${this.location}`;
+    storeDataList.appendChild(storeAddress);
+
+    // Create a list item for the contactInfo
+    const phoneItem = document.createElement('li');
+    phoneItem.textContent = `Contact Info: ${this.contactInfo}`;
+    storeDataList.appendChild(phoneItem);
 
 
 
-// // function customerTraffic(min, max) {
-// //     return Math.floor(Math.random() * (max - min) + min);
-// //   }
-  
-// //   const randomNumber = customerTraffic(10, 20);
-// //   console.log(randomNumber);
+  }
+}
+const lima = {
+  hours: "6am - 7am",
+  name: "Lima",
+  contactInfo: "555-555-5555",
+  location: "1 Sheikh Mohammed bin Rashid Blvd - Dubai",
+  render: function () {
+    const rootElement = document.getElementById("storeList");
+    const storeSection = document.createElement("section");
+    rootElement.appendChild(storeSection);
 
+    const title = document.createElement("h2");
+    title.textContent = this.name;
+    storeSection.appendChild(title);
 
-// //  const hours = ["6am:", "7am: ", "8am: ", "9am: ", "10am: ", "11am: ", "12pm: ", "1pm: ", "2pm: ", "3pm: ", "4pm: ", "5pm: "];
-// // const hourList = document.getElementById("seattle")
-// // function generateList(content, parent) {
-// //     const createList = document.createElement('li');
-// //     createList.textContent = content;
-// //     parent.appendChild(createList);
-// //   }
+    const storeDataList = document.createElement("ul");
+    storeSection.appendChild(storeDataList);
+    // create a list item for the hours
+    const storeHours = document.createElement('li');
+    storeHours.textContent = `Hours Open: ${this.hours}`;
+    storeDataList.appendChild(storeHours)
 
+    // Create a list item for the location
+    const storeAddress = document.createElement("li");
+    storeAddress.textContent = `Location: ${this.location}`;
+    storeDataList.appendChild(storeAddress);
 
+    // Create a list item for the contactInfo
+    const phoneItem = document.createElement('li');
+    phoneItem.textContent = `Contact Info: ${this.contactInfo}`;
+    storeDataList.appendChild(phoneItem);
+  }
+}
 
-
-
-
-
-
-// // function cookieSales() {
-// //     // Look Up Math.random on MDN
-// //     const max = tokyo.mincustomer;
-// //     const min = tokyo.maxcustomer;
-// //     return Math.floor(Math.random() * (max - min + 1) + min);
-// // }
-// // console.log()
+// Call the render function for each store
+seattle.render();
+tokyo.render();
+dubai.render();
+dubai.render();
+lima.render()
