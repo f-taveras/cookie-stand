@@ -54,10 +54,7 @@ function estimate(store) {
 
 function renderStore( store ) {
 
-  console.log("In the renderStore(), store is: ", store);
-
-  
-  
+    
   const rootElement = document.getElementById("salesList");
    const storeSection = document.createElement("section");
   rootElement.appendChild(storeSection);

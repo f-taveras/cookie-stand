@@ -1,15 +1,19 @@
-h1,h2,h3 {
+h1,
+h2,
+h3 {
     font-family: Righteous;
-  }
-  
-  body {
+}
+
+body {
     height: 100%;
     font-family: Georgia, 'Times New Roman', Times, serif;
-  }
-header{
+}
+
+header {
     background: black;
 }
-header h1{
+
+header h1 {
     font-family: 'Righteous', sans-serif;
     font-style: italic;
     font-size: 40px;
@@ -19,70 +23,73 @@ header h1{
     align-items: center;
     text-align: center;
 }
-header nav{
+
+header nav {
     background: salmon;
     padding: 10px;
-        
+
 }
 
 
-nav ul li{
+nav ul li {
     list-style: none;
     display: inline;
     margin-right: 20px;
-    
+
 }
 
-nav ul li a{
+nav ul li a {
     text-decoration: none;
     color: #333;
 }
 
-main{
+main {
     background: white;
     margin: 30px;
 }
 
-.salmon-container{
+.salmon-container {
     display: flex;
     justify-content: center;
     align-items: flex-start;
     border-bottom: #333 solid .1px;
     padding-bottom: 30px;
-    
+
 }
 
 
 
 ul li {
-  list-style: none;
-  margin: 5px 32px;
-  font-size: 1.2em;
-}ul li {
     list-style: none;
     margin: 5px 32px;
     font-size: 1.2em;
 }
 
-#locationList{
+ul li {
+    list-style: none;
+    margin: 5px 32px;
+    font-size: 1.2em;
+}
+
+#locationList {
     list-style-type: none;
-    /* display: flex; */
-    /* flex-direction: column; */
     margin: 2px;
-    /* display: list-item; */
-    
+
+
 }
-#storeList{
-    margin-top:50px ;
+
+#storeList {
+    margin-top: 50px;
 }
-#storeList h2{
+
+#storeList h2 {
     font-size: 1.5em;
     font-weight: bold;
     margin-bottom: .5em;
 }
 
-footer{
-    
+footer {
+
     bottom: 0;
     width: 100%;
     height: 50px;
