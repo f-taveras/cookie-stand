@@ -1,5 +1,55 @@
+// Function to generate a random number between min and max (inclusive)
+function getRandomInt(min, max) {
+  return Math.floor(Math.random() * (max - min + 1) + min);
+}
+
+// Constructor function to create store info
+function StoreInfo(name, minCustomers, maxCustomers, avgCookie) {
+  this.name = name;
+  this.minCustomersPerHour = minCustomers;
+  this.maxCustomersPerHour = maxCustomers;
+  this.averageCookies = avgCookie;
+  this.render();
+}
+
+StoreInfo.prototype.render = function() {
+  let body = document.getElementById("salesTable");
+  let storeRow = document.createElement('tr');
+  body.appendChild(storeRow);
+
+  let nameCell = document.createElement('td');
+  nameCell.textContent = this.name;
+  storeRow.appendChild(nameCell);
+
+  let salesData = this.estimate();
+
+  for (let i = 0; i < salesData.length; i++) {
+    let cell = document.createElement("td");
+    cell.textContent = salesData[i];
+    storeRow.appendChild(cell);
+  }
+}
+
+StoreInfo.prototype.estimate = function() {
+  let hours = ["6am", "7am", "8am"];
+  let estimatedSales = [];
+
+  for (let i = 0; i < hours.length; i++) {
+    const numCustomers = getRandomInt(this.minCustomersPerHour, this.maxCustomersPerHour);
+    const hourlySales = Math.ceil(numCustomers * this.averageCookies);
+    estimatedSales.push(hourlySales);
+  }
+
+  return estimatedSales;
+}
+
+let seattle = new StoreInfo("Seattle", 23, 65, 6.3);
 
 
+
+
+
+/*
 let hours = ["6am", "7am", "8am", "9am", "10am", "11am", "12am", "1pm","2pm" ,"3pm", "4pm", "5pm"];
 
 const seattle = {
@@ -93,3 +143,4 @@ tokyo.estimate();
 tokyo.render();
 
 
+ */
