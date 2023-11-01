@@ -1,14 +1,6 @@
-// DOM: Document OBJECT Model
-// Objects:
-//   Key/Value Pairs
-//   properties: Nouns or "Has"
-//   methods: Verbs or "Can"
 
-// Create a store object
-// NOTE: seattle.phoneNumbers[0] is "main"
-// These stores can "render" themselves ... "component"
 
-let hours = ["6am", "7am", "8am"];
+let hours = ["6am", "7am", "8am", "9am", "10am", "11am", "12am", "1pm","2pm"];
 
 const seattle = {
   name: "Seattle",
@@ -64,8 +56,8 @@ function renderStore( store ) {
   console.log("In the renderStore(), store is: ", store);
 
   // Looks for any element with an id="root", i.e.
-  // <section id="root">
-  const rootElement = document.getElementById("root");
+  
+  const rootElement = document.getElementById("salesList");
 
   // Create a new, empty section for a store
   const storeSection = document.createElement("section");
@@ -106,14 +98,4 @@ seattle.render();
 tokyo.estimate();
 tokyo.render();
 
-// Way #2
-// Make an array of stores and loop them.
 
-// Call the render function with different objects
-// let stores = [ seattle, tokyo ];
-
-// // Loop over the stores
-// for( let i=0; i < stores.length; i++ ) {
-//   stores[i].estimate();
-//   stores[i].render();
-// }
