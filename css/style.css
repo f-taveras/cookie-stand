@@ -43,6 +43,9 @@ nav ul li a {
     color: #333;
 }
 
+a:hover {
+color: aqua;
+}
 main {
     background: white;
     margin: 30px;
@@ -112,11 +115,26 @@ th {
     font-size: 1.3em;
     font-weight: bold;
     text-align: center;
-  }
+}
 
-  td{
+td{
     border: #333 solid 1px;
-    background: salmon;
+    /* background: salmon; */
     padding: .7em;
     text-align: center;
+}
+
+td:last-child{
+      background: grey;
+      /* color: #cccccc; */
   }
+
+  #tableFooter{
+    background: grey;
+  }
+
+  #salesTable{
+    background: salmon;
+  }
+
+  
