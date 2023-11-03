@@ -137,4 +137,11 @@ td:last-child{
     background: salmon;
   }
 
+  #storeForm{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-right: 50px;
+  }
+
   
