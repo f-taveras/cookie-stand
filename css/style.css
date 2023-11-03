@@ -144,4 +144,8 @@ td:last-child{
     margin-right: 50px;
   }
 
+  form button{
+     margin-left: 10px;
+  }
+
   
