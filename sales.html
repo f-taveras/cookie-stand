@@ -27,27 +27,27 @@
             </ul>
         </nav>
     </header>
-    
     <form id="storeForm">
-          <input name="name" placeholder="Store name" />
-          <input name="minCustomer" placeholder="Min. Customer" />;
-          <input name="maxCustomer" placeholder="Max. Customer" />;
-          <input name="avgCookie" placeholder="Avg. Cookie sale"/>
-          
-          <button type="Submit">Add Store</button>
-        </form>
+        <input name="name" placeholder="Store name" />
+        <input name="minCustomer" placeholder="Min. Customer" />;
+        <input name="maxCustomer" placeholder="Max. Customer" />;
+        <input name="avgCookie" placeholder="Avg. Cookie sale"/>
+        
+        <button type="submit">Add Store</button>
+    </form>
+
     <main>
-       
-    
+        
+        
         <table>
             <thead>
-              <tr>
-                <th>Location</th>
-                <th>6am</th>
-                <th>7am</th>
-                <th>8am</th>
-                <th>9am</th>
-                <th>10am</th>
+                <tr>
+                    <th>Location</th>
+                    <th>6am</th>
+                    <th>7am</th>
+                    <th>8am</th>
+                    <th>9am</th>
+                    <th>10am</th>
                 <th>11am</th>
                 <th>12am</th>
                 <th>1pm</th>
@@ -56,23 +56,25 @@
                 <th>4pm</th>
                 <th>5pm</th>
                 <th>Location Totals</th>
-              </tr>
-            </thead>
-  
-            <tbody id="salesTable">
-                
-            </tbody>
-  
-            <tfoot id="tableFooter"></tfoot>
-          </table>
+            </tr>
+        </thead>
         
-        <!-- <div id="salesList"></div> -->
-    </main>
+        <tbody id="salesTable">
+            
+        </tbody>
+        
+        <tfoot id="tableFooter"></tfoot>
+    </table>
+    
+    <div id="salesList"></div>
+    <section id="tableBody"></section>
+</main>
 
-    <footer>
-        © 2023 Pat's Salmon Cookies
-    </footer>
-    <script src="js/sales.js"></script>
+<footer>
+    © 2023 Pat's Salmon Cookies
+</footer>
+<script src="js/sales.js"></script>
+<!-- <script src="js/storeForm.js"></script> -->
 </body>
 
 </html>

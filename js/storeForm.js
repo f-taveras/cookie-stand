@@ -4,17 +4,17 @@ let form = document.getElementById("storeForm");
 
 let inputs = document.querySelectorAll("input");
 
-let stores = [];
+let allStores = [];
 let newStoreObject = {};
 
-function Store(name, minCustomer, maxCustomer, avgCookie) {
+function newStores(name, minCustomer, maxCustomer, avgCookie) {
   this.name = name;
   this.minCustomer = minCustomer;
   this.maxCustomer = maxCustomer;
   this.avgCookie = avgCookie;
 }
 
-Store.prototype.render = function() {
+newStores.prototype.render = function () {
   let nameCell = document.createElement("td");
   nameCell.textContent = this.name;
 
@@ -34,12 +34,10 @@ Store.prototype.render = function() {
   row.appendChild(avgCookieCell);
 
   tableBody.appendChild(row);
-}
+};
 
-console.log(inputs);
 for (let i = 0; i < inputs.length; i++) {
-  inputs[i].addEventListener("change", function(event) {
-    console.log(event.target.name, event.target.value);
+  inputs[i].addEventListener("change", function (event) {
     newStoreObject[event.target.name] = event.target.value;
   });
 }
@@ -49,26 +47,31 @@ function renderFooterRow() {
 
   let row = document.createElement("tr");
   let nameCell = document.createElement("td");
+  nameCell.textContent = "Footer"; // Set content for the footer row
   let minCustomerCell = document.createElement("td");
   let maxCustomerCell = document.createElement("td");
   let avgCookieCell = document.createElement("td");
 
+  row.appendChild(nameCell);
+  row.appendChild(minCustomerCell);
+  row.appendChild(maxCustomerCell);
+  row.appendChild(avgCookieCell);
+
   tableFooter.appendChild(row);
-  tableFooter.appendChild(nameCell);
-  tableFooter.appendChild(minCustomerCell);
-  tableFooter.appendChild(maxCustomerCell);
-  tableFooter.appendChild(avgCookieCell);
 }
 
-form.addEventListener("submit", function(event) {
+form.addEventListener("submit", function (event) {
   event.preventDefault();
   console.log(newStoreObject);
   let theStore = new Store(newStoreObject.name, newStoreObject.minCustomer, newStoreObject.maxCustomer, newStoreObject.avgCookie);
-  stores.push(theStore);
+  allStores.push(theStore);
   theStore.render();
   renderFooterRow();
+  form.reset(); // Clear the form input fields
+  newStoreObject = {}; // Reset the newStoreObject
+  // You should render the stores after they are added to the array.
+  for (let i = 0; i < allStores.length; i++) {
+    allStores[i].render();
+  }
 });
 
-for (let i = 0; i < stores.length; i++) {
-  stores[i].render();
-}
