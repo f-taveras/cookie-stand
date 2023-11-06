@@ -43,6 +43,9 @@ nav ul li a {
     color: #333;
 }
 
+a:hover {
+color: aqua;
+}
 main {
     background: white;
     margin: 30px;
@@ -99,3 +102,50 @@ footer {
     text-align: center;
     padding-top: 30px;
 }
+
+
+
+/* Sales page */
+
+th {
+    background-color: grey;
+    padding: .8em;
+    border: 1px solid #333;
+    color: white;
+    font-size: 1.3em;
+    font-weight: bold;
+    text-align: center;
+}
+
+td{
+    border: #333 solid 1px;
+    /* background: salmon; */
+    padding: .7em;
+    text-align: center;
+}
+
+td:last-child{
+      background: grey;
+      /* color: #cccccc; */
+  }
+
+  #tableFooter{
+    background: grey;
+  }
+
+  #salesTable{
+    background: salmon;
+  }
+
+  #storeForm{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-right: 50px;
+  }
+
+  form button{
+     margin-left: 10px;
+  }
+
+  

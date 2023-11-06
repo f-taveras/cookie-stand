@@ -1,3 +1,5 @@
+'use strict';
+
 const seattle = {
   hours: "6am - 7pm",
   name: "Seattle",

@@ -23,21 +23,59 @@
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="sales.html">Sales Data</a></li>
-
+                
             </ul>
         </nav>
     </header>
+    <form id="storeForm">
+        <input name="name" placeholder="Store name" />
+        <input name="minCustomer" placeholder="Min. Customer" />;
+        <input name="maxCustomer" placeholder="Max. Customer" />;
+        <input name="avgCookie" placeholder="Avg. Cookie sale"/>
+        
+        <button type="submit">Add Store</button>
+    </form>
 
     <main>
-       
-    
+        
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Location</th>
+                    <th>6am</th>
+                    <th>7am</th>
+                    <th>8am</th>
+                    <th>9am</th>
+                    <th>10am</th>
+                <th>11am</th>
+                <th>12am</th>
+                <th>1pm</th>
+                <th>2pm</th>
+                <th>3pm</th>
+                <th>4pm</th>
+                <th>5pm</th>
+                <th>Location Totals</th>
+            </tr>
+        </thead>
+        
+        <tbody id="salesTable">
+            
+        </tbody>
         <div id="salesList"></div>
-    </main>
+        <section id="tableBody"></section>
+        
+        <tfoot id="tableFooter"></tfoot>
+        <tfoot id="newRow"></tfoot>
+    </table>
+    
+</main>
 
-    <footer>
-        © 2023 Pat's Salmon Cookies
-    </footer>
-    <script src="js/sales.js"></script>
+<footer>
+    © 2023 Pat's Salmon Cookies
+</footer>
+<!-- <script src="js/sales.js"></script> -->
+<!-- <script src="js/storeForm.js"></script> -->
 </body>
 
 </html>

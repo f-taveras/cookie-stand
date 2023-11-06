@@ -1,6 +1,6 @@
-# LAB - 06
+# LAB - 08
 
-## Salmon-Cookies - Part I
+## Salmon-Cookies - Part II
 
 an app that shows the design of a webpaje for a customer and sales data
 
